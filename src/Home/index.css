@@ -1,0 +1,19 @@
+.submit{
+    cursor: pointer;
+    padding: 10px;
+    font-size: 12px;
+    background-color: skyblue;
+    border-color: black;
+    color: black;
+    margin-top: 40px;
+}
+.loading{
+    margin: auto;
+    display: block;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
