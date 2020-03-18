@@ -5,3 +5,10 @@ table, th, td {
 th, td {
     padding: 15px;
 }
+.colorTableContent{
+    height: 15px;
+    width: 15px;
+    display: inline-block;
+    margin-right: 5px;
+    border-radius: 50%;
+}

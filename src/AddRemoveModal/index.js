@@ -39,8 +39,6 @@ class AddRemoveModal extends React.Component {
             }
         }
 
-        console.log('handle checkbox : selectedFilters  ', selectedFilters)
-
         this.props.setUpdatedFilters({ selectedFilters: selectedFilters });
         this.setState({ selectedFilters: selectedFilters });
     }
@@ -53,17 +51,10 @@ class AddRemoveModal extends React.Component {
         /** Filtered by search input */
         allFilters = allFilters.filter((filter) => filter.includes(value) );
 
-        console.log('handle search input : allFilters  ', allFilters)
-
-        // this.props.setUpdatedFilters({ allFilters: allFilters });
-
         this.setState({ searchInput: value, allFilters: allFilters });
-
-        this.setState({ searchInput: value });
     }
 
     render(){
-        console.log('modal : ', this.state)
         let { selectedFilters, allFilters, searchInput } = this.state;
         return (
             <React.Fragment>

@@ -14,7 +14,7 @@ class Home extends React.Component {
         this.state = {
             productsData: getProductsData(),
             selectedProducts: {},
-            addRemoveAttributes: true,
+            isAddRemoveAttributesOpen: false,
             allFilters: FILTERS,
             selectedFilters: FILTERS
         };
@@ -65,13 +65,12 @@ class Home extends React.Component {
 
     /** Add/Remove button click functionality */
     addRemoveOnClick(){
-        let { addRemoveAttributes } = this.state;
-        this.setState({ addRemoveAttributes : !addRemoveAttributes })
+        let { isAddRemoveAttributesOpen } = this.state;
+        this.setState({ isAddRemoveAttributesOpen : !isAddRemoveAttributesOpen })
     }
 
     render(){
-        console.log('home: ', this.state)
-        const { productsData, selectedProducts, renderTableContent, addRemoveAttributes } = this.state;
+        const { productsData, selectedProducts, renderTableContent, isAddRemoveAttributesOpen, selectedFilters } = this.state;
         let selectedProductsKeys = Object.keys(selectedProducts);
         return (
             <React.Fragment>
@@ -80,7 +79,7 @@ class Home extends React.Component {
                 <button className="add-remove-button" onClick={this.addRemoveOnClick}>Add/Remove Attributes</button>
 
                 {/* Add/remove attributes Modal */}
-                {addRemoveAttributes && 
+                {isAddRemoveAttributesOpen && 
                     <AddRemoveModal 
                         addRemoveOnClick={this.addRemoveOnClick} 
                         setUpdatedFilters={this.setUpdatedFilters}
@@ -112,7 +111,7 @@ class Home extends React.Component {
                         })}
                     </div>
                     {/* Render compare table */}
-                    {selectedProductsKeys.length > 0 && 
+                    {selectedProductsKeys.length > 0 && selectedFilters.length > 0 && 
                         <CompareTable 
                             selectedProducts={selectedProducts} 
                             renderTableContent={renderTableContent} 

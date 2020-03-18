@@ -58,5 +58,25 @@ export const PRODUCTS_DATA = [{
     "condition": "Fresh",
     "description": "Just Apple",
     "vendors": ["Reliance"]
+  },
+  {
+    "id": "7",
+    "name": "Pineapple",
+    "image": "../../assets/Pineapple.jpg",
+    "price": "$2.35",
+    "colors": ["yellow","brown"],
+    "condition": "Old",
+    "description": "Just Pineapple",
+    "vendors": ["Reliance", "Big basket"]
+  },
+  {
+    "id": "8",
+    "name": "Banana",
+    "image": "../../assets/Banana.jpg",
+    "price": "$0.49",
+    "colors": ["green", "yellow"],
+    "condition": "Fresh",
+    "description": "Just Banana",
+    "vendors": ["Amazon"]
   }
 ];
