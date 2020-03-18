@@ -1,3 +1,4 @@
+export const FILTERS = ["price", "colors", "condition", "vendors"];
 export const PRODUCTS_DATA = [{
     "id": "1",
     "name": "Cherry",
